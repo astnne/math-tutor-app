@@ -1,12 +1,12 @@
-from flask import Flask, flash, redirect, url_for, render_template, request, session
+from flask import Flask, redirect, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return redirect("/home")
+    return redirect("/index")
 
-@app.route("/home")
+@app.route("/index")
 def index():
     return render_template("index.html")
 
